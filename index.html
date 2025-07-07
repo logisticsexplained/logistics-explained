@@ -759,7 +759,7 @@
 
         function loadLatestEpisode() {
 
-            const src = 'dist/videos.json?' + new Date().getTime(); // Cache-busting query parameter';
+            const src = 'podcasts.json?' + new Date().getTime(); // Cache-busting query parameter';
 
             fetch(src)
                 .then(response => response.json())
