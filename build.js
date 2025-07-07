@@ -13,7 +13,7 @@ try {
 
 const ret = entries.map(row => ({
   title: row.title,
-  link: row.link && row.link['@attributes'] ? row.link['@attributes']['href'] : null,
+  link: row.link['@attributes'] ? row.link['@attributes'].href : null,
   published: row.published,
   updated: row.updated,
   id: row.id,
