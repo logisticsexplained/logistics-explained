@@ -11,14 +11,14 @@ try {
   const result = await parseStringPromise(xml, { explicitArray: false });
   const entries = result.feed.entry;
 
-  const ret = entries.map(row => ({
-    title: row.title,
-    link: row.link['@attributes'] ? row.link['@attributes']['href'] : row.link.href,
-    published: row.published,
-    updated: row.updated,
-    id: row.id,
-    youtube_id: row.id.substring(row.id.lastIndexOf(':') + 1)
-  }));
+const ret = entries.map(row => ({
+  title: row.title,
+  link: row.link && row.link['@attributes'] ? row.link['@attributes']['href'] : null,
+  published: row.published,
+  updated: row.updated,
+  id: row.id,
+  youtube_id: row.id.substring(row.id.lastIndexOf(':') + 1)
+}));
 
   // ✅ Write to podcasts.json in root
   writeFileSync('./podcasts.json', JSON.stringify(ret, null, 2), 'utf8');
