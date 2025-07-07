@@ -20,8 +20,9 @@ try {
     youtube_id: row.id.substring(row.id.lastIndexOf(':') + 1)
   }));
 
-  writeFileSync('./dist/videos.json', JSON.stringify(ret, null, 2), 'utf8');
-  console.log('✅ videos.json written to ./dist');
+  // ✅ Write to podcasts.json in root
+  writeFileSync('./podcasts.json', JSON.stringify(ret, null, 2), 'utf8');
+  console.log('✅ podcasts.json written to root');
 } catch (err) {
   console.error('❌ Error fetching or parsing:', err);
   process.exit(1);
