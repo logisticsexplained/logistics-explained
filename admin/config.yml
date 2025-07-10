@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: richbarrett7/logistics-explained # Path to your GitHub repository
+  branch: main
+
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+editor:
+  preview: false
+
+collections:
+  - name: "sponsors"
+    label: "Sponsors Section"
+    files:
+      - file: "content/sponsors.json"
+        label: "Sponsors Content"
+        name: "sponsors"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Offer", name: "offer", widget: "text" }
+          - { label: "Link", name: "link", widget: "string",
+            hint: "URL to the sponsor's website" }
