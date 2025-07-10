@@ -189,12 +189,6 @@
                         <div class="space-y-4">
                             <h3 class="text-xl font-semibold">Latest Episode</h3>
                             <p class="text-blue-100" data-latest-episode-title=""></p>
-                            <div class="flex items-center justify-between text-sm text-blue-200">
-                                <span>45 min</span>
-                            </div>
-                            <div class="w-full bg-white/20 rounded-full h-2">
-                                <div class="bg-logistics-accent h-2 rounded-full w-1/3"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -424,16 +418,10 @@
                                                         <rect width="18" height="18" x="3" y="4" rx="2" />
                                                         <path d="M3 10h18" />
                                                     </svg>
-                                                    <span data-latest-episode-time></span>
+                                                    <span data-latest-episode-time=""></span>
                                                 </div>
-                                                <div class="flex items-center space-x-2">
-                                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2">
-                                                        <circle cx="12" cy="12" r="10" />
-                                                        <polyline points="12,6 12,12 16,14" />
-                                                    </svg>
-                                                    <span>45 min</span>
-                                                </div>
+                                               
+                                                
                                             </div>
                                         </div>
                                         <a href="" data-latest-episode-link
@@ -487,14 +475,6 @@
                                                         <path d="M3 10h18" />
                                                     </svg>
                                                     <span data-episode-time></span>
-                                                </div>
-                                                <div class="flex items-center space-x-2">
-                                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2">
-                                                        <circle cx="12" cy="12" r="10" />
-                                                        <polyline points="12,6 12,12 16,14" />
-                                                    </svg>
-                                                    <span>38 min</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -692,15 +672,16 @@
                     const episodeTitle = document.querySelectorAll('[data-latest-episode-title]');
                     const episodeLink = document.querySelectorAll('[data-latest-episode-link]');
                     const youtubeEmbed = document.querySelector('[data-latest-episode-youtube-embed]');
-                    const episodeTime = document.querySelector('[data-latest-episode-time]');
+                    const episodeTime = document.querySelectorAll('[data-latest-episode-time]');
 
                     episodeTitle.forEach(el => el.textContent = latestEpisode.title);
                     episodeLink.forEach(el => el.href = latestEpisode.link);
-                    episodeTime.textContent = new Date(latestEpisode.published).toLocaleDateString('en-US', {
+
+                    episodeTime.forEach(el => el.textContent = new Date(latestEpisode.published).toLocaleDateString('en-US', {
                         month: 'short',
                         day: 'numeric',
                         year: 'numeric'
-                    });
+                    }));
                     youtubeEmbed.innerHTML = `<iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/${latestEpisode.youtube_id}" title="${latestEpisode.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
                     for (let i = 1; i < 5; i++) {
