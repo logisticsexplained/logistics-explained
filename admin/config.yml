@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: richbarrett7/logistics-explained # Path to your GitHub repository
+  repo: logisticsexplained/logistics-explained # Path to your GitHub repository
   branch: main
 
 
