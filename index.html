@@ -143,16 +143,23 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex">
                         <a href="" data-latest-episode-link
-                            class="bg-logistics-accent hover:bg-logistics-accent/90 text-white px-8 py-4 text-lg font-semibold transition-all duration-200 transform hover:scale-105 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md">
+                            class="bg-logistics-accent hover:bg-logistics-accent/90 z-20 text-white px-6 py-4 text-lg font-semibold transition-all duration-200 transform hover:scale-105 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-l-md">
                             <svg class="w-5 h-5 mr-2 fill-white" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M8 5v14l11-7z" />
                             </svg>
                             Listen Latest Episode
                         </a>
+                        <a href="" data-latest-episode-listen-later-link
+                            class="flex flex-col text-white hover:bg-logistics-blue/90 text-xs px-4 bg-logistics-blue font-semibold transition-all duration-200 inline-flex duration-200 transform hover:scale-105 items-center justify-center gap-2 whitespace-nowrap rounded-r-md">
+                            <svg class="w-4 h-4 mr-2 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M17 3.34a10 10 0 1 1-14.995 8.984L2 12l.005-.324A10 10 0 0 1 17 3.34M12 6a1 1 0 0 0-.993.883L11 7v5l.009.131a1 1 0 0 0 .197.477l.087.1l3 3l.094.082a1 1 0 0 0 1.226 0l.094-.083l.083-.094a1 1 0 0 0 0-1.226l-.083-.094L13 11.585V7l-.007-.117A1 1 0 0 0 12 6"/></svg>
+                            <span>Listen Later</span>
+                        </a>
+                        </div>
                         <a href="#subscribe"
-                            class="border-white text-white hover:bg-white hover:text-logistics-blue px-8 py-4 text-lg font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border">
-                            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            class="border-white text-white hover:bg-white hover:text-logistics-blue px-4 py-4 text-lg font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border">
+                            <svg class="w-5 h-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                 <polyline points="7,10 12,15 17,10" />
@@ -160,6 +167,7 @@
                             </svg>
                             Subscribe Free
                         </a>
+                        
                     </div>
 
                     <div class="flex items-center space-x-8 text-blue-100">
@@ -424,6 +432,11 @@
                                                 
                                             </div>
                                         </div>
+                                        <a href="" data-latest-episode-listen-later-link
+                                            class="bg-logistics-blue hover:bg-logistics-accent/90 text-white ml-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2">
+                                            <svg class="w-4 h-4 mr-2 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M17 3.34a10 10 0 1 1-14.995 8.984L2 12l.005-.324A10 10 0 0 1 17 3.34M12 6a1 1 0 0 0-.993.883L11 7v5l.009.131a1 1 0 0 0 .197.477l.087.1l3 3l.094.082a1 1 0 0 0 1.226 0l.094-.083l.083-.094a1 1 0 0 0 0-1.226l-.083-.094L13 11.585V7l-.007-.117A1 1 0 0 0 12 6"/></svg>
+                                            Listen Later
+                                        </a>
                                         <a href="" data-latest-episode-link
                                             class="bg-logistics-accent hover:bg-logistics-accent/90 text-white ml-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2">
                                             <svg class="w-4 h-4 mr-2 fill-white" viewBox="0 0 24 24"
@@ -432,6 +445,7 @@
                                             </svg>
                                             Play
                                         </a>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -478,8 +492,14 @@
                                                 </div>
                                             </div>
                                         </div>
+                                         <a href="" data-episode-listen-later-link
+                                            class="bg-gray-400 hover:bg-logistics-accent/90 text-white ml-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2">
+                                            <svg class="w-4 h-4 mr-2 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M17 3.34a10 10 0 1 1-14.995 8.984L2 12l.005-.324A10 10 0 0 1 17 3.34M12 6a1 1 0 0 0-.993.883L11 7v5l.009.131a1 1 0 0 0 .197.477l.087.1l3 3l.094.082a1 1 0 0 0 1.226 0l.094-.083l.083-.094a1 1 0 0 0 0-1.226l-.083-.094L13 11.585V7l-.007-.117A1 1 0 0 0 12 6"/></svg>
+                                            Listen Later
+                                        </a>
+
                                         <a href="" data-episode-link
-                                            class="bg-logistics-blue hover:bg-logistics-blue/90 text-white ml-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2">
+                                            class="bg-logistics-blue hover:bg-logistics-accent/90 text-white ml-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2">
                                             <svg class="w-4 h-4 mr-2 fill-white" viewBox="0 0 24 24"
                                                 fill="currentColor">
                                                 <path d="M8 5v14l11-7z" />
@@ -674,6 +694,10 @@
                     const youtubeEmbed = document.querySelector('[data-latest-episode-youtube-embed]');
                     const episodeTime = document.querySelectorAll('[data-latest-episode-time]');
 
+                    const listenLaterLink = `mailto:?subject=Listen Later: ${encodeURIComponent(latestEpisode.title)}&body=Check out this episode: ${encodeURIComponent(latestEpisode.link)}`;
+                    const episodeListenLaterLink = document.querySelectorAll('[data-latest-episode-listen-later-link]');
+                    episodeListenLaterLink.forEach(el => el.href = listenLaterLink);
+
                     episodeTitle.forEach(el => el.textContent = latestEpisode.title);
                     episodeLink.forEach(el => el.href = latestEpisode.link);
 
@@ -705,6 +729,11 @@
             newEpisode.classList.remove('hidden');
             newEpisode.querySelectorAll('[data-episode-title]').forEach(el => el.textContent = episode.title);
             newEpisode.querySelectorAll('[data-episode-link]').forEach(el => el.href = episode.link);
+
+            const listenLaterLink = `mailto:?subject=Listen Later: ${encodeURIComponent(episode.title)}&body=Check out this episode: ${encodeURIComponent(episode.link)}`;
+            newEpisode.querySelectorAll('[data-episode-link]').forEach(el => el.href = episode.link);
+            newEpisode.querySelectorAll('[data-episode-listen-later-link]').forEach(el => el.href = listenLaterLink);
+
             newEpisode.querySelectorAll('[data-episode-time]').forEach(el => {
                 el.textContent = new Date(episode.published).toLocaleDateString('en-US', {
                     month: 'short',
