@@ -32,4 +32,6 @@ collections:
         name: "job-support-circle"
         fields:
           - { label: "Next call", name: "next_call", widget: "string", required: false,
-            hint: "Shown next to the 'Get the Zoom details' button, e.g. 'Thursday 13 November, 7pm (UK)'. Leave blank to hide it." }
+            hint: "Shown as the main date above the buttons, e.g. 'Thursday 13 November, 7pm (UK)'. Leave blank to hide it." }
+          - { label: "Zoom link", name: "zoom_link", widget: "string", required: false,
+            hint: "Full Zoom meeting URL for the 'Join Zoom' button, e.g. https://us02web.zoom.us/j/123456789. Leave blank to hide the button." }

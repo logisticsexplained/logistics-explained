@@ -354,33 +354,44 @@
                         <span class="font-semibold text-logistics-blue">Just people supporting people.</span>
                     </p>
 
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                        <a href="mailto:david@logisticsexplained.com?subject=Job%20Support%20Circle"
-                            class="bg-logistics-blue hover:bg-logistics-blue/90 text-white font-semibold h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap">
-                            Get the Zoom details
-                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14" />
-                                <path d="m12 5 7 7-7 7" />
-                            </svg>
-                        </a>
-
-                        <!-- Next call date: edited in the CMS (Job Support Circle), hidden when blank -->
+                    <!-- Next call: date and Zoom link are edited in the CMS (Job Support Circle); each hides when blank -->
+                    <div class="bg-white rounded-xl shadow-md border border-green-100 p-5 sm:p-6 flex flex-col gap-5">
                         <div class="hidden" data-cms-show="job-support-circle.next_call">
-                            <div
-                                class="inline-flex items-center gap-3 bg-white shadow-sm border border-green-100 rounded-md px-4 py-2 min-h-11">
-                                <svg class="w-5 h-5 shrink-0 text-logistics-accent" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" />
-                                    <path d="M16 2v4M8 2v4M3 10h18" />
-                                </svg>
-                                <span class="text-gray-700">
-                                    <span class="text-sm text-gray-500">Next call:</span>
-                                    <span class="font-semibold text-logistics-blue"
-                                        data-cms="job-support-circle.next_call"></span>
-                                </span>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 shrink-0 rounded-full bg-green-50 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-logistics-accent" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                                        <path d="M16 2v4M8 2v4M3 10h18" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-logistics-accent">
+                                        Next call</p>
+                                    <p class="text-xl sm:text-2xl font-bold text-logistics-blue font-poppins"
+                                        data-cms="job-support-circle.next_call"></p>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                            <div class="hidden" data-cms-show="job-support-circle.zoom_link">
+                                <a href="#" data-cms="job-support-circle.zoom_link" target="_blank" rel="noopener"
+                                    class="bg-logistics-blue hover:bg-logistics-blue/90 text-white font-semibold h-11 rounded-md px-8 flex sm:inline-flex items-center justify-center gap-2 whitespace-nowrap">
+                                    Join Zoom
+                                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <a href="mailto:david@logisticsexplained.com?subject=Job%20Support%20Circle"
+                                class="border border-logistics-blue text-logistics-blue hover:bg-blue-50 font-semibold h-11 rounded-md px-6 inline-flex items-center justify-center whitespace-nowrap">
+                                Get more details
+                            </a>
                         </div>
                     </div>
                 </div>
